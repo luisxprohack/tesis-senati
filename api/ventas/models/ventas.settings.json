@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ventas",
+  "info": {
+    "name": "ventas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fecha_venta": {
+      "type": "date"
+    },
+    "numero_venta": {
+      "type": "string",
+      "maxLength": 8,
+      "required": true
+    },
+    "cliente_nombre": {
+      "type": "string",
+      "required": true
+    },
+    "cliente_dni": {
+      "type": "string",
+      "required": true,
+      "maxLength": 8
+    },
+    "subtotal": {
+      "type": "float"
+    },
+    "total": {
+      "type": "float"
+    },
+    "estado": {
+      "type": "boolean"
+    },
+    "id_cliente": {
+      "model": "clientes"
+    },
+    "id_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

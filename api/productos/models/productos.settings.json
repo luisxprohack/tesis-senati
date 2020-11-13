@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "productos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "precio_compra": {
+      "type": "float"
+    },
+    "precio_venta": {
+      "type": "float"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "estado": {
+      "type": "boolean"
+    },
+    "img": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "fecha_vencimiento": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "detalle_productos",
+  "info": {
+    "name": "detalle_productos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "id_producto": {
+      "model": "productos"
+    },
+    "id_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "nombre": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+    
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empresas",
+  "info": {
+    "name": "empresa",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "direccion": {
+      "type": "string",
+      "required": true
+    },
+    "referencia": {
+      "type": "text",
+      "required": true
+    },
+    "correo": {
+      "type": "email"
+    },
+    "telefono": {
+      "type": "string",
+      "maxLength": 12,
+      "required": true
+    },
+    "ruc": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10
+    },
+    "id_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
